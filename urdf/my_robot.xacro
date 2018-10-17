@@ -4,4 +4,5 @@
     <xacro:include filename="$(find udacity_bot)/urdf/my_robot_xacro_defs.xacro" />
     <xacro:include filename="$(find udacity_bot)/urdf/my_robot_static_links.xacro" />
     <xacro:include filename="$(find udacity_bot)/urdf/my_robot_wheels.xacro" />  
+    <xacro:include filename="$(find udacity_bot)/urdf/my_robot_gazebo_tags.xacro" />
 </robot>
