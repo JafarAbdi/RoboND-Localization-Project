@@ -23,4 +23,8 @@
 <!-- Caster wheel -->
 <xacro:property name="casterRad" value="${(tireDiam - bodyHeight)/2.0}"/>
 
+<!-- Camera -->
+<xacro:property name="camera_link" value="0.025" /> <!-- Size of square 'camera' box -->
+
+
 </robot> 
