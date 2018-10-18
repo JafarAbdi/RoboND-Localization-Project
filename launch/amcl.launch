@@ -12,10 +12,8 @@
     <param name="odom_model_type" value="diff-corrected"/>
     <param name="base_frame_id" value="robot_footprint"/>
     <param name="global_frame_id" value="map"/>
-    <!-- Publish scans from best pose at a max of 10 Hz -->
     <param name="min_particles"             value="100"/>
     <param name="max_particles"             value="500"/>
-    <!-- translation std dev, m -->
     <param name="laser_model_type"          value="likelihood_field"/>
     <param name="laser_z_hit"          value="0.997"/>
     <param name="laser_z_rand"          value="0.003"/>
@@ -32,14 +30,14 @@
     <param name="odom_alpha4" value="0.005"/>
     <param name="odom_alpha5" value="0.003"/>
   </node>
-<!-- Move base -->
+
+  <!-- Move base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find udacity_bot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find udacity_bot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find udacity_bot)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find udacity_bot)/config/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find udacity_bot)/config/base_local_planner_params.yaml" command="load" />
-    <!--rosparam file="$(find udacity_bot)/config/move_base_params.yaml" command="load"/-->
 
     <remap from="cmd_vel" to="cmd_vel"/>
     <remap from="odom" to="odom"/>

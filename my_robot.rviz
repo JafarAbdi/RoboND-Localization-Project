@@ -6,6 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotState1
+        - /RobotState1/Links1
+        - /TF1
       Splitter Ratio: 0.5
     Tree Height: 595
   - Class: rviz/Selection
@@ -53,7 +56,7 @@ Visualization Manager:
       Collision Enabled: false
       Enabled: true
       Links:
-        All Links Enabled: true
+        All Links Enabled: false
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
@@ -64,6 +67,16 @@ Visualization Manager:
           Show Trail: false
           Value: true
         base_link_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: false
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hokuyo_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -86,13 +99,42 @@ Visualization Manager:
       Show Highlights: true
       Value: true
       Visual Enabled: true
-    - Class: rviz/Axes
-      Enabled: false
-      Length: 1
-      Name: Axes
-      Radius: 0.100000001
-      Reference Frame: <Fixed Frame>
-      Value: false
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        base_link_1:
+          Value: true
+        camera_link:
+          Value: true
+        hokuyo_link:
+          Value: true
+        left_wheel:
+          Value: true
+        right_wheel:
+          Value: true
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        base_link:
+          base_link_1:
+            {}
+          camera_link:
+            {}
+          hokuyo_link:
+            {}
+          left_wheel:
+            {}
+          right_wheel:
+            {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -118,7 +160,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.22046554
+      Distance: 0.64233619
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -133,10 +175,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: -0.139602393
+      Pitch: 0.565397382
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.652223051
+      Yaw: 0.837226927
     Saved: ~
 Window Geometry:
   Displays:
