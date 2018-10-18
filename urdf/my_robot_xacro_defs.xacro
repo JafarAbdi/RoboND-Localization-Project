@@ -21,7 +21,7 @@
 <xacro:property name="bodyOZ" value="${tireRad}" />   
 
 <!-- Caster wheel -->
-<xacro:property name="casterRad" value="${(tireDiam - bodyHeight)/2.0}"/>
+<xacro:property name="casterRad" value="${(tireDiam - bodyHeight)/2.0 + 0.0125}"/>
 
 <!-- Camera -->
 <xacro:property name="camera_link" value="0.025" /> <!-- Size of square 'camera' box -->
