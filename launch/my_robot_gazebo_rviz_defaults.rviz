@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /Image1
         - /Map3
+        - /Polygon1
       Splitter Ratio: 0.5
     Tree Height: 350
   - Class: rviz/Selection
@@ -209,6 +210,14 @@ Visualization Manager:
       Topic: /move_base/NavfnROS/plan
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Class: rviz/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: Polygon
+      Topic: /move_base/global_costmap/footprint
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -234,25 +243,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 14.0763025
+      Distance: 2.06884861
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.353031844
-        Y: 0.45182845
-        Z: 0.117868975
+        X: 0.0392306075
+        Y: 0.241924793
+        Z: 0.133341238
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.49979639
+      Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.59039831
+      Yaw: 1.52039838
     Saved: ~
 Window Geometry:
   Displays:
